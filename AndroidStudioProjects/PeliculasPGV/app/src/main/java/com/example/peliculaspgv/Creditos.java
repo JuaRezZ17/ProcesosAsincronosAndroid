@@ -47,6 +47,7 @@ public class Creditos extends AppCompatActivity {
         urlCreditos = urlCreditos.replace("{ID_PELICULA}", String.valueOf(b.getInt("IDPelicula")));
         urlCreditos = urlCreditos.replace("{API_KEY}", MainActivity.API_KEY);
         new ObtenerCreditosAsync().execute(urlCreditos);
+        urlCreditos = "https://api.themoviedb.org/3/movie/{ID_PELICULA}/credits?api_key={API_KEY}&language=en-US";
     }
 
     /*Creamos una clase para guardar los datos de la API en un ArrayList y llamamos a la clase
